@@ -9,6 +9,8 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
+  display: grid;
+  place-items: center;
 }
 .container::before {
   content: "";
@@ -19,4 +21,47 @@ body {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  z-index: -1;
+}
+.eye-wrapper {
+  display: flex;
+}
+.eye-wrapper:before {
+  content: "";
+  position: absolute;
+  width: 26rem;
+  height: 6rem;
+  background-color: #a8a7ac;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.eye {
+  width: 10em;
+  height: 10em;
+  border: 15px solid #a6a4ad;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.eye-ball {
+  width: 3.2em;
+  height: 3.2em;
+  background: radial-gradient(#271e1e 35%, #935a29 37%);
+  border-radius: 50%;
+  margin: 0.2em 3.5em;
+  position: relative;
+}
+.eye-ball::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 0.5em;
+  height: 0.7em;
+  border-radius: 50%;
+  top: 13px;
+  left: 13px;
+  transform: rotate(45deg);
 }
